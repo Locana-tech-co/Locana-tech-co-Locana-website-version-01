@@ -42,7 +42,7 @@ export function Navbar() {
                 <a href="#services" className="n-link">Product <ChevronDown /></a>
                 <div className="dp-pane" role="menu">
                   <a href="#services" className="dp-link" role="menuitem"><div className="dp-title">Services</div><div className="dp-desc">Custom software and intelligent automation built for scale.</div></a>
-                  <a href="#products" className="dp-link" role="menuitem"><div className="dp-title">Flagship Products</div><div className="dp-desc">Explore Menyoos, AutoFlow, and DataLens.</div></a>
+                  <a href="#products" className="dp-link" role="menuitem"><div className="dp-title">Flagship Products</div><div className="dp-desc">Explore , AutoFlow, and DataLens.</div></a>
                   <a href="#research" className="dp-link" role="menuitem"><div className="dp-title">Locana Labs</div><div className="dp-desc">Our R&D division exploring next-generation neural architectures.</div></a>
                 </div>
               </li>

@@ -1,6 +1,14 @@
 import React, { useState, useRef, useCallback } from 'react';
 import { FORM_INITIAL, CONTACT_INFO, validateForm } from '../data/constants';
 
+const Field = ({ id, label, error, children }) => (
+  <div className="fg">
+    <label htmlFor={id}>{label}</label>
+    {children}
+    {error && <span className="f-err" role="alert">{error}</span>}
+  </div>
+);
+
 export function Contact() {
   const [fields, setFields] = useState(FORM_INITIAL);
   const [errors, setErrors] = useState({});
@@ -15,25 +23,35 @@ export function Contact() {
     if (fields._hp) return;
 
     const errs = validateForm(fields);
-    if (Object.keys(errs).length > 0) { setErrors(errs); return; }
+    if (Object.keys(errs).length > 0) { 
+      console.log("Form validation failed with errors:", errs);
+      setErrors(errs); 
+      return; 
+    }
+
+    console.log("Contact form submitted successfully with data:", fields);
 
     setErrors({}); setStatus('sending');
     lastSubmit.current = Date.now();
 
-    setTimeout(() => {
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(fields)
+    })
+    .then(res => res.json())
+    .then(() => {
       setStatus('sent');
       setFields(FORM_INITIAL);
       setTimeout(() => setStatus('idle'), 3200);
-    }, 800);
+    })
+    .catch(err => {
+      console.error(err);
+      setStatus('idle');
+    });
   };
 
-  const Field = ({ id, label, error, children }) => (
-    <div className="fg">
-      <label htmlFor={id}>{label}</label>
-      {children}
-      {error && <span className="f-err" role="alert">{error}</span>}
-    </div>
-  );
+
 
   return (
     <section id="contact" className="sec" aria-labelledby="contact-h">

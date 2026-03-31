@@ -8,7 +8,7 @@ export const SERVICES = [
 ];
 
 export const PRODUCTS = [
-  { layout: 'full', vis: 'pv1', tag: 'Flagship Product', name: 'Menyoos™',  title: 'Menyoos — Digital Restaurant OS',  desc: 'QR menus, real-time ordering, kitchen displays, analytics — one intelligent system for modern restaurants.', chips: ['QR Menus','Order Management','Kitchen Display','Analytics','Multi-Branch'], link: 'Visit Menyoos →' },
+  { layout: 'full', vis: 'pv1', tag: 'Flagship Product', name: 'ABC',  title: 'ABC — Digital Restaurant OS',  desc: 'QR menus, real-time ordering, kitchen displays, analytics — one intelligent system for modern restaurants.', chips: ['QR Menus','Order Management','Kitchen Display','Analytics','Multi-Branch'], link: 'Visit ABC →' },
   { layout: '',     vis: 'pv2', tag: 'Automation',        name: 'AutoFlow™', title: 'AutoFlow — No-Code Automation',    desc: 'Visual workflow builder connecting your tools and running processes automatically, 24/7.',                   chips: ['No-Code','80+ Integrations','Real-time'],                                  link: 'Learn more →'    },
   { layout: 'd1',   vis: 'pv3', tag: 'Analytics',         name: 'DataLens™', title: 'DataLens — Business Intelligence', desc: 'Turn raw data into dashboards. Connect any source, surface insights in minutes.',                          chips: ['Live Dashboards','AI Insights','Custom Reports'],                          link: 'Learn more →'    },
 ];
@@ -58,7 +58,7 @@ export const BRANCHES = [
 
 export const FOOTER_COLS = {
   Services: { hrefs: ['#services','#services','#services','#research'], labels: ['Custom Software','Automation','AI Integration','Locana Labs'] },
-  Products: { hrefs: ['#products','#products','#products'],             labels: ['Menyoos','AutoFlow','DataLens']                              },
+  Products: { hrefs: ['#products','#products','#products'],             labels: ['ABC','AutoFlow','DataLens']                              },
   Company:  { hrefs: ['#team','#careers','#contact'],                   labels: ['Team','Careers','Contact']                                  },
 };
 
@@ -68,12 +68,12 @@ export const CONTACT_INFO = [
   ['📞', 'Phone',    '+91 7829500988'],
   ['📍', 'Based In', 'Ranchi, India · Worldwide'],
 ];
-export const MARQUEE_ITEMS = ['Custom Software','AI Automation','Menyoos','Systems Integration','Data Pipelines','ML Models','Consulting','Locana'];
+export const MARQUEE_ITEMS = ['Custom Software','AI Automation','ABC','Systems Integration','Data Pipelines','ML Models','Consulting','Locana'];
 
 export const VALIDATORS = {
   firstName: (v) => v.trim().length >= 2             || 'At least 2 characters.',
   lastName:  (v) => v.trim().length >= 2             || 'At least 2 characters.',
-  email:     (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) || 'Enter a valid email.',
+  email:     (v) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(v.trim()) || 'Enter a valid email.',
   company:   (v) => v.trim().length >= 2             || 'At least 2 characters.',
   service:   (v) => v !== 'Select...'                || 'Please select a service.',
   details:   (v) => v.trim().length >= 20            || 'At least 20 characters.',
