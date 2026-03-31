@@ -64,7 +64,7 @@ export const FOOTER_COLS = {
 
 export const FORM_INITIAL = { firstName: '', lastName: '', email: '', company: '', service: 'Select...', details: '' };
 export const CONTACT_INFO = [
-  ['✉️', 'Email',    'varunrajss07@gmail.com'],
+  ['✉️', 'Email',    'locanatechnologies@gmail.com'],
   ['📞', 'Phone',    '+91 7829500988'],
   ['📍', 'Based In', 'Ranchi, India · Worldwide'],
 ];
