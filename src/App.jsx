@@ -1,22 +1,22 @@
 import React, { useState, useCallback } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Loader } from './components/Loader';
 import { Cursor } from './components/Cursor';
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { Marquee } from './components/Marquee';
-import { Services } from './components/Services';
-import { Integration } from './components/Integration';
-import { Products } from './components/Products';
-import { Research } from './components/Research';
-import { Team } from './components/Team';
-import { Careers } from './components/Careers';
-import { Process } from './components/Process';
-import { Pricing } from './components/Pricing';
-import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { ScrollToTop } from './components/ScrollToTop';
+import { AmbientFX } from './components/AmbientFX';
+import { Home } from './pages/Home';
+import { ServicesPage } from './pages/ServicesPage';
+import { WorkPage } from './pages/WorkPage';
+import { AllCaseStudiesPage } from './pages/AllCaseStudiesPage';
+import { Company } from './pages/Company';
+import { PricingPage } from './pages/PricingPage';
+import { ContactPage } from './pages/ContactPage';
+import { CaseStudyBikeRental } from './pages/CaseStudyBikeRental';
 import { useScrollReveal } from './hooks/useScrollReveal';
 
-function App() {
+function AppInner() {
   const [dark, setDark] = useState(true);
   useScrollReveal();
 
@@ -30,18 +30,34 @@ function App() {
 
   return (
     <>
+      <AmbientFX />
       <Loader />
       <Cursor />
       <button id="thm" type="button" onClick={toggleTheme} aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}>
         {dark ? '☀️' : '🌙'}
       </button>
+      <ScrollToTop />
       <Navbar />
-      <main>
-        <Hero /><Marquee /><Services /><Integration /><Products />
-        <Research /><Team /><Careers /><Process /><Pricing /><Contact />
-      </main>
+      <Routes>
+        <Route path="/"                        element={<Home />} />
+        <Route path="/services"               element={<ServicesPage />} />
+        <Route path="/work"                   element={<WorkPage />} />
+        <Route path="/work/case-studies"      element={<AllCaseStudiesPage />} />
+        <Route path="/work/bike-rental"       element={<CaseStudyBikeRental />} />
+        <Route path="/company"                element={<Company />} />
+        <Route path="/pricing"                element={<PricingPage />} />
+        <Route path="/contact"                element={<ContactPage />} />
+      </Routes>
       <Footer />
     </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppInner />
+    </BrowserRouter>
   );
 }
 
