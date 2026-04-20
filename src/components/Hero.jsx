@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { useNeuralCanvas } from '../hooks/useNeuralCanvas';
 
 export function Hero() {
@@ -10,12 +11,12 @@ export function Hero() {
       <canvas id="hero-nn" ref={ref} aria-hidden="true" />
       <div className="h-vig" aria-hidden="true" />
       <div className="h-content">
-        <div className="h-badge"><span className="bdot" aria-hidden="true" />Custom Software · AI-Automation · R&D</div>
+        <div className="h-badge"><span className="bdot" aria-hidden="true" />Custom Software · Websites & SEO · Automation</div>
         <h1 className="mega">Build <em>smarter.</em><br /><span className="rose-w">Scale</span> faster.</h1>
         <p className="h-sub">Intelligent software &amp; automation<br />for ambitious businesses.</p>
         <div className="h-btns">
-          <a href="#contact"  className="btn-hero-w">Book a Meeting</a>
-          <a href="#services" className="btn-hero-o">Explore Services</a>
+          <Link to="/contact" className="btn-hero-w">Book a Meeting</Link>
+          <Link to="/services" className="btn-hero-o">Explore Services</Link>
         </div>
       </div>
       <div className="h-scroll" aria-hidden="true"><span>Scroll</span><div className="h-scroll-line" /></div>

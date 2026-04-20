@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { PLANS } from '../data/constants';
 
 export function Pricing() {
@@ -22,8 +23,8 @@ export function Pricing() {
                 {p.features.map((f) => <li className="pf" key={f}><span className="pchk" aria-hidden="true">✓</span>{f}</li>)}
               </ul>
               {p.featured
-                ? <a href="#contact" className="btn-fill"  style={{ display: 'flex', justifyContent: 'center' }}><span>{p.cta}</span></a>
-                : <a href="#contact" className="btn-ghost" style={{ display: 'flex', justifyContent: 'center' }}>{p.cta}</a>}
+                ? <Link to="/contact" className="btn-fill"  style={{ display: 'flex', justifyContent: 'center' }}><span>{p.cta}</span></Link>
+                : <Link to="/contact" className="btn-ghost" style={{ display: 'flex', justifyContent: 'center' }}>{p.cta}</Link>}
             </div>
           ))}
         </div>

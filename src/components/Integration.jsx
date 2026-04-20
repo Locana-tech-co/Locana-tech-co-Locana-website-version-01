@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { APPS, BRANCHES } from '../data/constants';
 
 export function Integration() {
@@ -37,7 +38,7 @@ export function Integration() {
             {APPS.map((a, i) => (
               <div className="t-app" key={i}>
                 <div className="t-ripple" style={{ '--delay': a.delay }} />
-                <div className="t-icon">
+                <div className="t-icon" style={a.pad ? { padding: a.pad } : { padding: '10px' }}>
                   <img src={a.src} alt={a.alt} loading="lazy" crossOrigin="anonymous"
                     onError={(e) => { e.currentTarget.style.opacity = '0'; }} />
                 </div>
@@ -49,7 +50,7 @@ export function Integration() {
           </div>
         </div>
         <div className="int-cta-w rv d2" style={{ marginTop: '3.5rem' }}>
-          <a href="#contact" className="int-cta"><span>Discuss Your Stack</span></a>
+          <Link to="/contact" className="int-cta"><span>Discuss Your Stack</span></Link>
         </div>
         <p className="int-note rv d3">No lock-in · Connects to your stack in hours</p>
       </div>
