@@ -13,8 +13,8 @@ export function CaseStudies() {
         {/* Header */}
         <div className="cs-hd">
           <span className="lbl rv">Our Work</span>
-          <h2 id="cs-h" className="sh rv">Real projects,<br /><em>measurable results</em></h2>
-          <p className="sdesc rv">A selection of solutions we've built for ambitious businesses — from automation platforms to AI-powered products.</p>
+          <h2 id="cs-h" className="sh rv">Engineering<br /><em>Portfolio</em></h2>
+          <p className="sdesc rv">A selection of solutions we've built for ambitious businesses. <br/><strong>Please Note: The projects displayed below are for marketing and demonstration purposes.</strong></p>
         </div>
 
         {/* Filter pills */}
@@ -51,20 +51,11 @@ export function CaseStudies() {
               <div className="cs-body">
                 <div className="cs-meta">
                   <span className="cs-industry">{c.industry}</span>
-                  <span className="cs-year">{c.year}</span>
                 </div>
                 <h3 className="cs-title">{c.title}</h3>
                 <p className="cs-desc">{c.desc}</p>
 
-                {/* Stats */}
-                <div className="cs-stats">
-                  {c.stats.map((s) => (
-                    <div className="cs-stat" key={s.label}>
-                      <span className="cs-stat-val">{s.value}</span>
-                      <span className="cs-stat-lbl">{s.label}</span>
-                    </div>
-                  ))}
-                </div>
+                {/* Stats Removed as requested */}
 
                 {/* Tags */}
                 <div className="p-chips cs-chips">
