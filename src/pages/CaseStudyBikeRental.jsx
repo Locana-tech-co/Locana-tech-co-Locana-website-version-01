@@ -58,7 +58,7 @@ export function CaseStudyBikeRental() {
 
               <div className="cs-detail-block rv d1">
                 <h2>What We Built</h2>
-                <p>Content coming soon — this section will detail the full-stack solution: online booking system, real-time GPS fleet tracking, dynamic pricing engine, Stripe payment integration, and the rider-facing mobile-optimised interface.</p>
+                <p>Content coming soon — this section will detail the full-stack solution: online booking system, real-time GPS fleet tracking, dynamic pricing engine, Razorpay payment integration, and the rider-facing mobile-optimised interface.</p>
               </div>
 
               <div className="cs-detail-block rv d2">
@@ -72,7 +72,7 @@ export function CaseStudyBikeRental() {
               <div className="cs-detail-sidebar-box">
                 <h3>Tech Stack</h3>
                 <div className="p-chips" style={{ marginTop: '1rem' }}>
-                  {['React', 'Node.js', 'GPS Tracking', 'Stripe', 'Maps API', 'PostgreSQL', 'REST API'].map((t) => (
+                  {['React', 'Node.js', 'Razorpay', 'PostgreSQL', 'REST API'].map((t) => (
                     <span className="p-chip" key={t}>{t}</span>
                   ))}
                 </div>

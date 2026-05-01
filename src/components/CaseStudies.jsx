@@ -14,7 +14,7 @@ export function CaseStudies() {
         <div className="cs-hd">
           <span className="lbl rv">Our Work</span>
           <h2 id="cs-h" className="sh rv">Engineering<br /><em>Portfolio</em></h2>
-          <p className="sdesc rv">A selection of solutions we've built for ambitious businesses. <br/><strong>Please Note: The projects displayed below are for marketing and demonstration purposes.</strong></p>
+          <p className="sdesc rv">A selection of solutions we've built for ambitious businesses. <br /><strong>Please Note: The projects displayed below are for marketing and demonstration purposes and cannot be shared publicly due to NDA's.</strong></p>
         </div>
 
         {/* Filter pills */}

@@ -14,7 +14,7 @@ export const CASE_STUDIES = [
     industry: 'Travel & Mobility',
     year: '2026',
     title: 'Full-Stack Bike Rental Website',
-    desc: 'Built a complete bike rental platform with online booking, real-time GPS fleet tracking, dynamic pricing, Stripe payments, and a rider-facing mobile-optimised interface — replacing manual pen-and-paper operations entirely.',
+    desc: 'Built a complete bike rental platform with online booking, real-time GPS fleet tracking, dynamic pricing, payments, and a rider-facing mobile-optimised interface — replacing manual pen-and-paper operations entirely.',
     label: 'RideEasy',
     vis: 'csv1',
     stats: [
@@ -22,7 +22,7 @@ export const CASE_STUDIES = [
       { value: '80%', label: 'Less manual work' },
       { value: '4wk', label: 'Delivered in' },
     ],
-    tags: ['React', 'Node.js', 'Stripe'],
+    tags: ['React', 'Node.js', 'Razorpay'],
   },
   {
     slug: 'inventory-system',
