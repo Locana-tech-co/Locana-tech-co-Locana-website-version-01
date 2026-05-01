@@ -41,7 +41,7 @@ export function CaseStudyBikeRental() {
               <span className="cs-stat-lbl">Delivered in</span>
             </div>
             <div className="cs-detail-stat">
-              <span className="cs-stat-val">2025</span>
+              <span className="cs-stat-val">2026</span>
               <span className="cs-stat-lbl">Year</span>
             </div>
           </div>
