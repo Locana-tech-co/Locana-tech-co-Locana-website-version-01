@@ -4,20 +4,12 @@ import { useNeuralCanvas } from '../hooks/useNeuralCanvas';
 
 export function Hero() {
   const ref = useRef(null);
-  // useNeuralCanvas(ref, 'hero', { nodeCount: 75, speed: .38, linkDist: 170, glowR: 6.5 });
+  useNeuralCanvas(ref, 'hero', { nodeCount: 75, speed: .38, linkDist: 170, glowR: 6.5 });
 
   return (
     <section id="hero" aria-label="Hero">
       <div className="h-atmo" aria-hidden="true" /><div className="h-grain" aria-hidden="true" />
-      {/* <canvas id="hero-nn" ref={ref} aria-hidden="true" /> */}
-      
-      {/* Premium Animated Mesh Gradient Background */}
-      <div className="hero-mesh-bg" aria-hidden="true">
-        <div className="mesh-blob blob-1"></div>
-        <div className="mesh-blob blob-2"></div>
-        <div className="mesh-blob blob-3"></div>
-      </div>
-
+      <canvas id="hero-nn" ref={ref} aria-hidden="true" />
       <div className="h-vig" aria-hidden="true" />
       
       <div className="h-content">
