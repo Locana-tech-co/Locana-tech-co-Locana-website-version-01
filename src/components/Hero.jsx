@@ -13,11 +13,9 @@ export function Hero() {
       <div className="h-vig" aria-hidden="true" />
       
       <div className="h-content">
-        <div className="hero-badge">
-          <span className="badge-dot"></span> Award-Winning Agency
-        </div>
-        <h1 className="mega">Grow with time <br/>and efficiency with <span className="rose-w">Locana.</span></h1>
-        <p className="h-sub">Custom software and high-converting web architecture for global brands scaling past 7 figures.</p>
+        {/* Elite Software badge removed as requested */}
+        <h1 className="mega">We engineer<br /><em>digital</em> <span className="rose-w">monopolies.</span></h1>
+        <p className="h-sub">Custom software and high-converting web architecture<br />for global brands scaling past 7 figures.</p>
         <div className="h-btns">
           <Link to="/contact" className="btn-hero-w">Book a Meeting</Link>
           <Link to="/services" className="btn-hero-o">Explore Services</Link>

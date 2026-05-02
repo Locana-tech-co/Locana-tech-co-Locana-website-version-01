@@ -155,16 +155,12 @@ body.ch #cur-r { width: 52px; height: 52px; }
 .bdot { width: 5px; height: 5px; border-radius: 50%; background: var(--rose); animation: bdPulse 2s infinite; }
 @keyframes bdPulse { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
 
-.hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 100px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.9); margin-bottom: 1.5rem; animation: fadeUp .95s 0s var(--ease) both; }
-.badge-dot { width: 6px; height: 6px; background: var(--rose); border-radius: 50%; box-shadow: 0 0 10px var(--rose); animation: pulse 2s infinite; }
-@keyframes pulse { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } 100% { opacity: 1; transform: scale(1); } }
-
-h1.mega { font-family: var(--f); font-size: clamp(2.8rem,6.5vw,6rem); font-weight: 400; line-height: .98; letter-spacing: -.02em; color: #fff; margin-bottom: 2rem; max-width: 14ch; margin-inline: auto; animation: fadeUp .95s .12s var(--ease) both; text-shadow: 0 2px 40px rgba(0,0,0,.4); }
+h1.mega { font-family: var(--f); font-size: clamp(2.8rem,6.5vw,6rem); font-weight: 400; line-height: .98; letter-spacing: -.02em; color: #fff; margin-bottom: 2rem; animation: fadeUp .95s .12s var(--ease) both; text-shadow: 0 2px 40px rgba(0,0,0,.4); }
 [data-theme="light"] h1.mega { color: var(--ink); text-shadow: none; }
 h1.mega em      { font-style: italic; font-weight: 300; }
 h1.mega .rose-w { color: var(--rose); }
 
-.h-sub { font-family: var(--f-body); font-size: 1.1rem; font-weight: 300; color: rgba(255,255,255,.85); letter-spacing: .02em; margin-bottom: 3.2rem; max-width: 45ch; margin-inline: auto; animation: fadeUp .95s .24s var(--ease) both; }
+.h-sub { font-family: var(--f-body); font-size: 1.1rem; font-weight: 300; color: rgba(255,255,255,.6); letter-spacing: .02em; margin-bottom: 3.2rem; animation: fadeUp .95s .24s var(--ease) both; }
 [data-theme="light"] .h-sub { color: var(--body); }
 
 .h-btns { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; animation: fadeUp .95s .36s var(--ease) both; }
