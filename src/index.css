@@ -146,6 +146,16 @@ body.ch #cur-r { width: 52px; height: 52px; }
 [data-theme="light"] .h-atmo { background: radial-gradient(ellipse 90% 70% at 50% 115%,rgba(200,140,155,.4) 0%,transparent 55%), radial-gradient(ellipse 70% 50% at 18% 85%,rgba(160,190,220,.35) 0%,transparent 52%), linear-gradient(180deg,#b8cce0 0%,#c8d4e4 28%,#c8c0d0 50%,#d0b8c4 72%,#c8b0bc 100%); }
 .h-grain { position: absolute; inset: 0; z-index: 1; opacity: .035; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 300px; }
 #hero-nn { position: absolute; inset: 0; z-index: 2; }
+.hero-mesh-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 1; background-color: #050505; }
+.mesh-blob { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.6; animation: floatMesh 20s infinite alternate ease-in-out; }
+.blob-1 { width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(226,169,173,0.15) 0%, rgba(0,0,0,0) 70%); top: -10%; left: -10%; animation-duration: 25s; }
+.blob-2 { width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(120,120,130,0.1) 0%, rgba(0,0,0,0) 70%); bottom: -20%; right: -10%; animation-duration: 22s; animation-delay: -5s; }
+.blob-3 { width: 40vw; height: 40vw; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0) 70%); top: 40%; left: 50%; transform: translate(-50%, -50%); animation-duration: 18s; animation-delay: -10s; }
+@keyframes floatMesh { 0% { transform: translate(0, 0) scale(1); } 33% { transform: translate(5%, 8%) scale(1.1); } 66% { transform: translate(-4%, 4%) scale(0.9); } 100% { transform: translate(2%, -5%) scale(1.05); } }
+[data-theme="light"] .hero-mesh-bg { background-color: #f8f9fa; }
+[data-theme="light"] .blob-1 { background: radial-gradient(circle, rgba(226,169,173,0.3) 0%, rgba(255,255,255,0) 70%); }
+[data-theme="light"] .blob-2 { background: radial-gradient(circle, rgba(200,200,210,0.4) 0%, rgba(255,255,255,0) 70%); }
+[data-theme="light"] .blob-3 { background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%); filter: blur(60px); opacity: 0.8;}
 .h-vig { position: absolute; inset: 0; z-index: 3; pointer-events: none; background: radial-gradient(ellipse 120% 50% at 50% 0%,rgba(0,0,0,.45) 0%,transparent 55%), radial-gradient(ellipse 120% 35% at 50% 100%,rgba(0,0,0,.55) 0%,transparent 65%), radial-gradient(ellipse 30% 100% at 0% 50%,rgba(0,0,0,.3) 0%,transparent 50%), radial-gradient(ellipse 30% 100% at 100% 50%,rgba(0,0,0,.3) 0%,transparent 50%); }
 
 .h-content { position: relative; z-index: 4; padding: 110px 6% 90px; max-width: 860px; }
